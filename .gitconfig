@@ -1,0 +1,5 @@
+[user]
+	name = Ole Michaelis
+	email = Ole.Michaelis@googlemail.com
+[mergetool]
+	keepBackup = true
