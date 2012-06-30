@@ -1,16 +1,14 @@
-# Extracted from https://github.com/ulrich/macaron-factory/blob/master/.gitignore
-# Ignore all dotfiles...
-.*
-# except for .gitignore
-!.gitignore
+# Compiled Python files
+*.pyc
 
-# Ignore Play! working directory #
-db
-eclipse
-log
-logs
-precompiled
-tmp
-test-result
-eclipse
-server.pid
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
