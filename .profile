@@ -15,6 +15,9 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 PS1='\h:\W$(__git_ps1 "(%s)") \u\$ '
 
+#hub autocompletion
+source /usr/local/etc/bash_completion.d/hub.bash_completion.sh
+
 # aliases
 alias ll="ls -la -G"
 alias please="sudo"
