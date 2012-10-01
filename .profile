@@ -11,7 +11,8 @@ complete -W "$(echo `vagrant --help | awk '/^     /{print $1}'`;)" vagrant
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 
 #git autocompletion and magic stuff
-source /usr/local/etc/bash_completion.d/git-completion.bash
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash 
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 PS1='\h:\W$(__git_ps1 "(%s)") \u\$ '
 
@@ -33,9 +34,10 @@ export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 ##
 
 # MacPorts Installer addition on 2012-04-04_at_23:33:43: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+export PATH=$PATH:/usr/local/share/npm/bin
 
 # {{{
 # Node Completion - Auto-generated, do not touch.
