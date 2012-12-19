@@ -11,6 +11,10 @@ ZSH_THEME="robbyrussell"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias please="sudo"
+alias xfdings="tar xfvz"
+alias apache2ctl='sudo /opt/local/apache2/bin/apachectl'
+alias composer="php ~/composer.phar"
+alias sniff="sudo ngrep -W byline -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -35,4 +39,8 @@ plugins=(git brew node github gem nom osx symfony2 vagrant)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/opt/local/bin:/opt/local/sbin:/usr/local/share/npm/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/opt/local/bin:/opt/local/sbin:/usr/local/share/npm/bin:/Users/ole/globalcomposer/vendor/bin
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
