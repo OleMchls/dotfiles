@@ -39,7 +39,7 @@ plugins=(git brew node github gem nom osx symfony2 vagrant)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/opt/local/bin:/opt/local/sbin:/usr/local/share/npm/bin:/Users/ole/globalcomposer/vendor/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/opt/local/bin:/opt/local/sbin:/usr/local/share/npm/bin:/Users/ole/globalcomposer/vendor/bin
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 ### Added by the Heroku Toolbelt
