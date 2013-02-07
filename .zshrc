@@ -42,5 +42,12 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/opt/local/bin:/opt/local/sbin:/usr/local/share/npm/bin:/Users/ole/globalcomposer/vendor/bin
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
+#AWS
+export JAVA_HOME="$(/usr/libexec/java_home)"
+#export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
+#export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
+export AWS_CLOUDFORMATION_HOME="/usr/local/Library/LinkedKegs/aws-cfn-tools/jars"
+export AWS_CREDENTIAL_FILE="$HOME/.ec2/credentials"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
