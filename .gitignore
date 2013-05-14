@@ -40,3 +40,7 @@ Thumbs.db
 # IDE Files #
 #############
 .idea
+
+# Fun STUFF #
+#############
+post-commit
