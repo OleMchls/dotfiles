@@ -19,6 +19,7 @@ alias composer="php ~/composer.phar"
 alias sniff="sudo ngrep -W byline -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias git-yolo='git commit -am "`curl -s http://whatthecommit.com/index.txt`"'
 alias lol="lolcommits -l"
+alias jpkg="julia -e 'for pkg in ARGS; Pkg.add(pkg); end'"
 
 # Completion
 fpath=(/usr/local/share/zsh/site-functions $fpath)
@@ -55,18 +56,11 @@ export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
+# aws completion
+source /usr/local/share/zsh/site-functions/_aws
+
 # certs
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-
-#AWS
-export JAVA_HOME="$(/usr/libexec/java_home)"
-export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
-export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
-export AWS_CLOUDFORMATION_HOME="/usr/local/Library/LinkedKegs/aws-cfn-tools/jars"
-export AWS_CREDENTIAL_FILE="$HOME/.ec2/credentials"
-export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.6.0/jars"
-export EC2_REGION="eu-west-1"
-export EC2_URL="https://ec2.eu-west-1.amazonaws.com"
 
 #CUDA
 export PATH="/Developer/NVIDIA/CUDA-5.5/bin:$PATH"
@@ -78,3 +72,18 @@ source /Users/ole/.travis/travis.sh
 # go
 export GOPATH="$HOME/.go"
 export PATH="$PATH:$(go env GOROOT)/bin:$GOPATH/bin"
+
+# fuckyou
+function fuck() {
+  if [ ! $1 ]; then
+    echo "Usage: fuck you <process_name>"
+    #exit
+  fi
+
+  if killall $2; then
+    echo
+    echo " (╯°□°）╯︵ ┻━┻"
+    #echo " (╯°□°）╯︵$(echo $2 | flip)" # https://gist.github.com/Gargron/9122743
+    echo
+  fi
+}
