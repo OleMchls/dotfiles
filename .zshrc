@@ -15,11 +15,9 @@ export EDITOR=vim
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias please="sudo"
 alias xfdings="tar xfvz"
-alias composer="php ~/composer.phar"
 alias sniff="sudo ngrep -W byline -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias git-yolo='git commit -am "`curl -s http://whatthecommit.com/index.txt`"'
 alias lol="lolcommits -l"
-alias jpkg="julia -e 'for pkg in ARGS; Pkg.add(pkg); end'"
 
 # Completion
 fpath=(/usr/local/share/zsh/site-functions $fpath)
@@ -47,31 +45,12 @@ plugins=(git brew node github gem npm osx symfony2 vagrant bundler coffee batter
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/npm/bin:/Users/ole/globalcomposer/vendor/bin
-
-#PHP
-export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/npm/bin
 
 # chruby
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
-
-# aws completion
-source /usr/local/share/zsh/site-functions/_aws
-
-# certs
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-
-#CUDA
-export PATH="/Developer/NVIDIA/CUDA-5.5/bin:$PATH"
-export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-5.5/lib:$DYLD_LIBRARY_PATH
-
-# added by travis gem
-source /Users/ole/.travis/travis.sh
-
-# go
-export GOPATH="$HOME/.go"
-export PATH="$PATH:$(go env GOROOT)/bin:$GOPATH/bin"
+chruby ruby-2.1.2
 
 # fuckyou
 function fuck() {
