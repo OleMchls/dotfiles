@@ -1,2 +1,0 @@
-#PEAR_Config 0.9
-a:3:{s:10:"__channels";a:11:{s:12:"pecl.php.net";a:0:{}s:5:"__uri";a:0:{}s:11:"doc.php.net";a:0:{}s:15:"pear.phpunit.de";a:0:{}s:16:"components.ez.no";a:0:{}s:26:"pear.amazonwebservices.com";a:0:{}s:19:"pear.netpirates.net";a:0:{}s:16:"pear.pdepend.org";a:0:{}s:14:"pear.phpmd.org";a:0:{}s:19:"pear.phpqatools.org";a:0:{}s:24:"pear.symfony-project.com";a:0:{}}s:8:"temp_dir";s:22:"/private/tmp/pear/temp";s:13:"auto_discover";i:1;}
