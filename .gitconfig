@@ -11,3 +11,5 @@
     branch = auto
 [push]
     default = simple
+[alias]
+    yolo = push -f
