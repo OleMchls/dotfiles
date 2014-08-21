@@ -10,6 +10,10 @@ ZSH_THEME="robbyrussell"
 # Editor
 export EDITOR=vim
 
+# UTF-8 Locals
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
