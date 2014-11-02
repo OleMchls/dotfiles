@@ -44,7 +44,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew node github gem npm osx symfony2 vagrant bundler coffee battery composer emoji-clock git-hubflow git-extras github golang heroku npm rails sublime atom chruby php ruby)
+plugins=(git brew node gem npm osx vagrant bundler coffee composer git-extras golang heroku npm rails atom chruby php ruby)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -54,19 +54,6 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X1
 # chruby
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
-chruby ruby-2.1.2
 
-# fuckyou
-function fuck() {
-  if [ ! $1 ]; then
-    echo "Usage: fuck you <process_name>"
-    #exit
-  fi
-
-  if killall $2; then
-    echo
-    echo " (╯°□°）╯︵ ┻━┻"
-    #echo " (╯°□°）╯︵$(echo $2 | flip)" # https://gist.github.com/Gargron/9122743
-    echo
-  fi
-}
+# added by travis gem
+[ -f /Users/ole/.travis/travis.sh ] && source /Users/ole/.travis/travis.sh
