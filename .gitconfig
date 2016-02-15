@@ -1,15 +1,24 @@
 [user]
-	name = Ole Michaelis
-	email = Ole.Michaelis@googlemail.com
+name = Ole Michaelis
+; This will force git to ask me who I am per repo.
+; See for-fun and for-work aliases.
+email = (none)
+
 [mergetool]
-	keepBackup = true
+keepBackup = true
+
 [core]
-	excludesfile = ~/.gitignore
+excludesfile = ~/.gitignore
+
 [color]
-    diff = auto
-    status = auto
-    branch = auto
+diff = auto
+status = auto
+branch = auto
+
 [push]
-    default = simple
+default = simple
+
 [alias]
-    yolo = push -f
+yolo = push -f
+for-fun  = config user.email "Ole.Michaelis@googlemail.com"
+for-work = config user.email "Ole.Michaelis@googlemail.com"
