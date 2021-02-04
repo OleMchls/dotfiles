@@ -1,8 +1,10 @@
 [user]
-name = Ole Michaelis
+	name = Ole Michaelis
+useconfigonly = true
+	email = Ole.Michaelis@googlemail.com
+	signingkey = E8E979B5E9687D03
 ; This will force git to ask me who I am per repo.
 ; See for-fun and for-work aliases.
-email = (none)
 
 [mergetool]
 keepBackup = true
@@ -21,4 +23,8 @@ default = simple
 [alias]
 yolo = push -f
 for-fun  = config user.email "Ole.Michaelis@googlemail.com"
-for-work = config user.email "Ole.Michaelis@googlemail.com"
+for-work = config user.email "ole.michaelis@dnsimple.com"
+[credential]
+	helper = osxkeychain
+[diff]
+	noprefix = true

@@ -22,6 +22,9 @@ alias xfdings="tar xfvz"
 alias sniff="sudo ngrep -W byline -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias git-yolo='git commit -am "`curl -s http://whatthecommit.com/index.txt`"'
 alias lol="lolcommits -l"
+alias cmon="bundle install && yarn install && rails db:migrate"
+
+eval "$(thefuck --alias)"
 
 # Completion
 fpath=(/usr/local/share/zsh/site-functions $fpath)
@@ -45,16 +48,20 @@ COMPLETION_WAITING_DOTS="true"
 # Do something and receive a desktop alert when it completes `sudo apt-get install something | alert`
 alias alert='terminal-notifier -title "$([ $? = 0 ] && echo terminal || echo error)" -message "$(pwd)" -subtitle ""'
 # Search process by name and highlight !
-function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
+function psgrep() { ps aux | grep -v grep | grep "$@" -i --color=auto; }
 # Search for files and page it
 function search() { find . -iname "*$@*" | less; }
 # eXpand anything
 alias xx="atool -x"
+# unix timestap
+alias ts="date +%s"
+# fix rubycop issues and stage
+alias rcop="rubocop --format simple --auto-correct; git add -p"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew node gem npm osx vagrant bundler coffee composer git-extras golang heroku npm rails atom chruby php ruby nyan)
+plugins=(git brew node gem npm osx vagrant bundler coffee composer git-extras golang heroku npm rails atom ruby mix-fast)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,18 +69,28 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/npm/bin
 
 # chruby
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+#source /usr/local/opt/chruby/share/chruby/chruby.sh
+#source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# boot2docker
-eval "$(boot2docker shellinit 2> /dev/null)"
-
 # added by travis gem
 [ -f /Users/ole/.travis/travis.sh ] && source /Users/ole/.travis/travis.sh
 
+# pokemon-terminal
+# export PATH=$PATH:$HOME/.pokemon-terminal
+# pokemon random-kanto && clear
+
 # important
-fortune | ponysay
+# fortune | ponysay
+
+#LOLCOMMITS
+export LOLCOMMITS_DELAY=2
+
+# pgp
+export GPG_TTY=$(tty)
+
+
+. /usr/local/opt/asdf/asdf.sh

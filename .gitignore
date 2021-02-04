@@ -40,6 +40,9 @@ Thumbs.db
 # IDE Files #
 #############
 .idea
+.mix_tasks
+Procfile.local
+#.tool-versions
 
 # Fun STUFF #
 #############
