@@ -43,6 +43,7 @@ Thumbs.db
 .mix_tasks
 Procfile.local
 #.tool-versions
+launch.json
 
 # Fun STUFF #
 #############

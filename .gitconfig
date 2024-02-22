@@ -2,7 +2,7 @@
 	name = Ole Michaelis
 useconfigonly = true
 	email = Ole.Michaelis@googlemail.com
-	signingkey = E8E979B5E9687D03
+	signingkey = 4D7EEFC35167D370
 ; This will force git to ask me who I am per repo.
 ; See for-fun and for-work aliases.
 
@@ -26,5 +26,3 @@ for-fun  = config user.email "Ole.Michaelis@googlemail.com"
 for-work = config user.email "ole.michaelis@dnsimple.com"
 [credential]
 	helper = osxkeychain
-[diff]
-	noprefix = true
